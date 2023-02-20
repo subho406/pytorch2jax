@@ -101,7 +101,7 @@ flax_model.apply(params, jnp.ones((10, 10)))
 
 # Contributing
 
-If you encounter any bugs or issues while using pytorch-to-jax, or if you have any suggestions for improvements or new features, please open an issue on the GitHub repository at https://github.com/yourusername/your-repo.
+If you encounter any bugs or issues while using pytorch-to-jax, or if you have any suggestions for improvements or new features, please open an issue on the GitHub repository at https://github.com/subho406/Pytorch2Jax.
 
 # License
 
