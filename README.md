@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/pytorch2jax.svg)](https://badge.fury.io/py/pytorch2jax)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Pytorch2Jax is a small Python library that provides functions to wrap PyTorch models into Jax functions and Flax modules. It uses `dlpack` to convert between Pytorch and Jax tensors in-memory and executes Pytorch backend inside Jax wrapped functions. The wrapped functions are compaitible with Jax backward-mode autodiff (`jax.grad` and `jax.vjp`) via `functorch.vjp`.
+Pytorch2Jax is a small Python library that provides functions to wrap PyTorch models into Jax functions and Flax modules. It uses `dlpack` to convert between Pytorch and Jax tensors in-memory and executes Pytorch backend inside Jax wrapped functions. The wrapped functions are compaitible with Jax backward-mode autodiff (`jax.grad` and `jax.vjp`) via `functorch.vjp` and could use be used in any `dlpack` compatible hardware.
 
 ## Installation
 
