@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/pytorch2jax.svg)](https://badge.fury.io/py/pytorch2jax)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Pytorch2Jax is a small Python library that provides functions to convert PyTorch models into Jax functions and Flax modules. 
+Pytorch2Jax is a small Python library that provides functions to wrap PyTorch models into Jax functions and Flax modules. It uses `dlpack` to convert between Pytorch and Jax tensors in-memory and executes Pytorch backend inside Jax wrapped functions. The wrapped functions are compaitible Jax backward-mode autodiff via `functorch.vjp`.
 
 ## Installation
 
@@ -20,7 +20,7 @@ import torch
 import jax.numpy as jnp
 from pytorch2jax import py_to_jax_wrapper
 
-# Define a PyTorch function that returns a tensor of ones
+# Define a PyTorch function that multiples an input tensor with another tensor
 # and wrap it with the py_to_jax_wrapper decorator
 @py_to_jax_wrapper
 def fn(x):
@@ -101,7 +101,7 @@ flax_model.apply(params, jnp.ones((10, 10)))
 
 # Contributing
 
-If you encounter any bugs or issues while using pytorch-to-jax, or if you have any suggestions for improvements or new features, please open an issue on the GitHub repository at https://github.com/subho406/Pytorch2Jax.
+If you encounter any bugs or issues while using pytorch2jax, or if you have any suggestions for improvements or new features, please open an issue on the GitHub repository at https://github.com/subho406/Pytorch2Jax.
 
 # License
 
