@@ -24,7 +24,7 @@ from pytorch2jax import py_to_jax_wrapper
 # and wrap it with the py_to_jax_wrapper decorator
 @py_to_jax_wrapper
 def fn(x):
-    return torch.ones(10,10)
+    return torch.rand((10,10))*x
 
 
 # Call the wrapped function on a JAX array
