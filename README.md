@@ -92,7 +92,6 @@ class SampleFlaxModule(jnn.Module):
 # Create an instance of the new Flax module
 flax_model = SampleFlaxModule(flax_module)
 
-# Initialize the parameters of the Flax model using random key and a 10x10 array of ones as input
 params = flax_model.init(jax.random.PRNGKey(0), jnp.ones((10, 10)))
 
 # Apply the Flax model to the input to get the output
